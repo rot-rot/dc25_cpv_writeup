@@ -3,7 +3,7 @@ Won by team rot(rot(λ)):
 [CryptoK](https://twitter.com/0xF0unD)
 [elegin](https://twitter.com/aaronsteimle)
 [Jabroni](https://twitter.com)
-[llamaprincess](https://twitter.com)
+[llamaprincess](https://twitter.com/_llamaprincess)
 [pseudoku](https://twitter.com/_pseudoku)
 [zevlag](https://twitter.com/zevlag)
 
@@ -13,23 +13,61 @@ WIP
 [Original Contest Website](http://goldbug.cryptovillage.org/tgbr/)
 
 ### iOS
-#### tl;dr solution: SQUIDS
+tl;dr flag= SQUIDS
 
+#### The Puzzle
+```
 1. JK EJRN☆U. I☆T G☆ NRFJNUC QJ QTLU NUEJNC UVUNY QNTI☆TQDTIQGE QUDULSJIU EJIVUN☆TQGJI. FTYHU QSUY'C NUEJNCUC QSG☆ ☆U☆☆GJI.
 2. WO HJIBSJP HNIY MPO☆TOIUBOQ. WO GBQSOI NGWNYQ. UNHO N VJBUO, JTS JM SCO ENEOG JM SJIATOQ, QKONFBIA SJ TQ. BS KGNYOR TQ N HBACSY RTE.
 3. IUIMYFCI WTP PIEMIQP. DQ'P ASPQ T BTQQIM FR RDCGDCL F☆Q VWTQ QWIY TMI.
 4. SHB ☆GMKPSLJS SH☆JO LIKUS QBTUP☆SY QYQSBGQ ☆QJ'S HKW SHBY WKPD, ☆S'Q HKW SHBY RL☆F.
 5. MGV DGFN ☆G XGS VCFQ QMTLT ETLLCNTL QG KTECIF LTYKTQ? ... I VCFQ QMTE QG KTECIF LTYKTQ OGK CL DGFN CL ETF CKT YCHCRDT GO TUID.
 6. OH XDQ VNCP PD RGGJ N ☆GELGP, XDQ BQ☆P NA☆D FOTG OP HLDB XDQL☆GAH.
+```
+#### Solution
+This puzzle was a classic substitution cipher with a twist.
+1. A ☆ is used instead of a character.
+2. Each line does not share the same substitution.
+
+Solving the substitution yields
+```
+1. OF COURSE. NSA IS RUMORED TO TAPE RECORD EVERY TRANSATLANTIC TELEPHONE CONVERSATION. MAYBE THEY'D RECORDED THIS SESSION.
+2. WE MONITOR MANY FREQUENCIES. WE LISTEN ALWAYS. CAME A VOICE, OUT OF THE BABEL OF TONGUES, SPEAKING TO US. IT PLAYED US A MIGHTY DUB.
+3. EVERYONE HAS SECRETS. IT'S JUST A MATTER OF FINDING OUT WHAT THEY ARE.
+4. THE IMPORTANT THING ABOUT SECURITY SYSTEMS ISN'T HOW THEY WORK, IT'S HOW THEY FAIL.
+5. HOW LONG DO YOU WANT THESE MESSAGES TO REMAIN SECRET? ... I WANT THEM TO REMAIN SECRET FOR AS LONG AS MEN ARE CAPABLE OF EVIL.
+6. IF YOU WANT TO KEEP A SECRET, YOU MUST ALSO HIDE IT FROM YOURSELF.
+```
+
+Take what each ☆ represents and putting them all together yields the flag **SQUIDS**
 
 ### ColecoVision
-#### tl;dr solution: LADYBUG
+tl;dr flag= LADYBUG
+
+#### The Puzzle
+<img src="colecovisionpuzz.png" width="200">
+
+#### Solution
+This puzzle was a straightforward usage of [ITA2 (Baudot) code](https://en.wikipedia.org/wiki/Baudot_code#ITA2) in the 543.21 format.
+
+Decoding the image yields the flag **LADYBUG**
 
 ### ZXSpectrum
-#### tl;dr solution: WRIGGLER
+tl;dr flag= WRIGGLER
+
+#### The Puzzle
+<img src="ZXSpectrum.png" width="400">
+
+#### Solution
+            3 TREA cMXuQ=CHE RYO
+66T =FIM vfAGES tA8PAINT
+KERSL p76 ASTN X AMEAL B7hLCAPS
+Ceci n’est pas un labyrinthe.
+                                                                                        http://aesencryption.net/
+
 
 ### Atari 2600
-#### tl;dr solution: CENTIPEDE
+tl;dr flag= CENTIPEDE
 
 Find 3 of each:
 Countries
@@ -90,19 +128,19 @@ Rot13 → CENTIPEDE
 Solution: CENTIPEDE
 
 ### Nintendo 64
-#### tl;dr solution: BUCKBUMBLE
+tl;dr flag= BUCKBUMBLE
 
 ### Apple II
-#### tl;dr solution: DUNGBEETLES
+tl;dr flag= DUNGBEETLES
 
 ### Game Boy
-#### tl;dr solution: YARS'REVENGE
+tl;dr flag= YARS'REVENGE
 
 ### Playstation 2
-#### tl;dr solution: EXTERMINATION
+tl;dr flag= EXTERMINATION
 
 ### META puzzle
-#### tl;dr solution: QUINCUNX
+tl;dr flag= QUINCUNX
 Solutions:
 SQUIDS
 LADYBUG
@@ -116,5 +154,3 @@ EXTERMINATION
 Key: 2 6 3 3 3 2 10 2 < Check this > checked
 
 Meta-Solution: QUINCUNX
-
-
