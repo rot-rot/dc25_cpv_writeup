@@ -76,11 +76,26 @@ Decoding the image yields the flag **LADYBUG**
 
 Ooo ooo a maze! Finally something I can solve without too much thinking. As I was happily solving the maze (which took literally 5 seconds), Jabroni tells me the French at the bottom says "This is not a maze." So much for that....
 
-Upon further exploration, Jabroni notice the maze has hidden characters and a link to [http://aesencryption.net/](http://aesencryption.net/). This can be found by performing a `Select All` on the maze PDF (you did notice it was a [PDF](ZXSpectrum.pdf) right?) and dumping the text to a text editor.
+Upon further exploration, Jabroni notice the maze has hidden characters and a link to [http://aesencryption.net/](http://aesencryption.net/).
 
-|| <img src="ZXSpectrum-highlighted.png" width="500"> ||
+|| <img src="ZXSpectrum-selected.png" width="500"> ||
 
-|| <img src="ZXSpectrum-text.png" width="500"> ||
+This can be found by performing a `Select All` on the maze PDF (you did notice it was a [PDF](http://goldbug.cryptovillage.org/ZXSpectrum/ZXSpectrum.pdf) right?) and dumping the text to a text editor:
+
+```
+Ceci n’est pas un labyrinthe.
+3 T R E A
+c M X u Q = C H E
+R Y O
+6 6 T = F I M
+v f A G E S
+t A 8 P A I N T
+K E R S L
+p 7 6 A S T N
+X A M E A L
+B 7 h L C A P S
+http://aesencryption.net/
+```
 
 I immediately start reconstructing the string by selecting the characters in the order of the path out of the maze, starting from the bottom. This yields a base64 string:
 
@@ -116,7 +131,7 @@ Ehh... word search, not my favorite type of thing. Always feels like busy work.
 
 We quickly realized this was not an ordinary word search because every word we found seemed to be one letter off (first letter to be exact). Here are the words we found:
 
-|| <img src="atari_solved.png" width="500"> ||
+|| <img src="atari-solved.png" width="500"> ||
 
 || Categories                | Word Found   | Correct Spelling ||
 ||---------------------------|--------------|------------------||
