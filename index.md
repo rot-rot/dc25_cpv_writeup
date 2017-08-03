@@ -76,7 +76,11 @@ Decoding the image yields the flag **LADYBUG**
 
 Ooo ooo a maze! Finally something I can solve without too much thinking. As I was happily solving the maze (which took literally 5 seconds), Jabroni tells me the French at the bottom says "This is not a maze." So much for that....
 
-Upon further exploration, Jabroni notice the maze has hidden characters and a link to [http://aesencryption.net/](http://aesencryption.net/). This can be found by performing a `Select All` on the maze PDF (you did notice it was a PDF right?) and dumping the text to a text editor.
+Upon further exploration, Jabroni notice the maze has hidden characters and a link to [http://aesencryption.net/](http://aesencryption.net/). This can be found by performing a `Select All` on the maze PDF (you did notice it was a [PDF](ZXSpectrum.pdf) right?) and dumping the text to a text editor.
+
+|| <img src="ZXSpectrum-highlighted.png" width="500"> ||
+
+|| <img src="ZXSpectrum-text.png" width="500"> ||
 
 I immediately start reconstructing the string by selecting the characters in the order of the path out of the maze, starting from the bottom. This yields a base64 string:
 
