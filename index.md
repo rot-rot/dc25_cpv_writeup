@@ -1,4 +1,6 @@
-# DEF CON 25 Crypto and Privacy Village Contest
+# DEF CON 25 Crypto and Privacy Village Contest Write-up
+{:.no_toc}
+
 Won by team rot(rot(λ)):
 [CryptoK](https://twitter.com/0xF0unD)
 [elegin](https://twitter.com/aaronsteimle)
@@ -7,158 +9,218 @@ Won by team rot(rot(λ)):
 [pseudoku](https://twitter.com/_pseudoku)
 [zevlag](https://twitter.com/zevlag)
 
-## Write-up
-WIP
+Written by pseudoku
 
 [Original Contest Website](http://goldbug.cryptovillage.org/tgbr/)
+0. TOC
+{:toc}
 
-### iOS
-tl;dr flag= SQUIDS
+## iOS
+###### tl;dr simple substitution cipher; different alphabet per line; concatenating all six ☆; flag=**SQUIDS**
+{:.no_toc}
 
-#### The Puzzle
-```
-1. JK EJRN☆U. I☆T G☆ NRFJNUC QJ QTLU NUEJNC UVUNY 
-   QNTI☆TQDTIQGE QUDULSJIU EJIVUN☆TQGJI. FTYHU QSUY'C 
-   NUEJNCUC QSG☆ ☆U☆☆GJI.
-2. WO HJIBSJP HNIY MPO☆TOIUBOQ. WO GBQSOI NGWNYQ. UNHO 
-   N VJBUO, JTS JM SCO ENEOG JM SJIATOQ, QKONFBIA SJ 
-   TQ. BS KGNYOR TQ N HBACSY RTE.
-3. IUIMYFCI WTP PIEMIQP. DQ'P ASPQ T BTQQIM FR RDCGDCL 
-   F☆Q VWTQ QWIY TMI.
-4. SHB ☆GMKPSLJS SH☆JO LIKUS QBTUP☆SY QYQSBGQ ☆QJ'S 
-   HKW SHBY WKPD, ☆S'Q HKW SHBY RL☆F.
-5. MGV DGFN ☆G XGS VCFQ QMTLT ETLLCNTL QG KTECIF 
-   LTYKTQ? ... I VCFQ QMTE QG KTECIF LTYKTQ OGK CL 
-   DGFN CL ETF CKT YCHCRDT GO TUID.
-6. OH XDQ VNCP PD RGGJ N ☆GELGP, XDQ BQ☆P NA☆D FOTG 
-   OP HLDB XDQL☆GAH.
-```
-#### Solution
-This puzzle was a classic substitution cipher with a twist.
-1. A ☆ is used instead of a character.
-2. Each line does not share the same substitution.
+### Puzzle
+{:.no_toc}
+
+1. JK EJRN☆U. I☆T G☆ NRFJNUC QJ QTLU NUEJNC UVUNY QNTI☆TQDTIQGE QUDULSJIU EJIVUN☆TQGJI. FTYHU QSUY'C NUEJNCUC QSG☆ ☆U☆☆GJI.
+2. WO HJIBSJP HNIY MPO☆TOIUBOQ. WO GBQSOI NGWNYQ. UNHO N VJBUO, JTS JM SCO ENEOG JM SJIATOQ, QKONFBIA SJ TQ. BS KGNYOR TQ N HBACSY RTE.
+3. IUIMYFCI WTP PIEMIQP. DQ'P ASPQ T BTQQIM FR RDCGDCL F☆Q VWTQ QWIY TMI.
+4. SHB ☆GMKPSLJS SH☆JO LIKUS QBTUP☆SY QYQSBGQ ☆QJ'S HKW SHBY WKPD, ☆S'Q HKW SHBY RL☆F.
+5. MGV DGFN ☆G XGS VCFQ QMTLT ETLLCNTL QG KTECIF LTYKTQ? ... I VCFQ QMTE QG KTECIF LTYKTQ OGK CL DGFN CL ETF CKT YCHCRDT GO TUID.
+6. OH XDQ VNCP PD RGGJ N ☆GELGP, XDQ BQ☆P NA☆D FOTG OP HLDB XDQL☆GAH.
+
+### Solution
+{:.no_toc}
+
+This puzzle was a simple substitution cipher with a twist.
+1. A ☆ is used in place of one of the characters.
+2. Each line has a different substitution alphabet.
 
 Solving the substitution yields
-```
-1. OF COURSE. NSA IS RUMORED TO TAPE RECORD EVERY 
-   TRANSATLANTIC TELEPHONE CONVERSATION. MAYBE THEY'D 
-   RECORDED THIS SESSION.
-2. WE MONITOR MANY FREQUENCIES. WE LISTEN ALWAYS. CAME 
-   A VOICE, OUT OF THE BABEL OF TONGUES, SPEAKING TO 
-   US. IT PLAYED US A MIGHTY DUB.
-3. EVERYONE HAS SECRETS. IT'S JUST A MATTER OF FINDING 
-   OUT WHAT THEY ARE.
-4. THE IMPORTANT THING ABOUT SECURITY SYSTEMS ISN'T 
-   HOW THEY WORK, IT'S HOW THEY FAIL.
-5. HOW LONG DO YOU WANT THESE MESSAGES TO REMAIN 
-   SECRET? ... I WANT THEM TO REMAIN SECRET FOR AS 
-   LONG AS MEN ARE CAPABLE OF EVIL.
-6. IF YOU WANT TO KEEP A SECRET, YOU MUST ALSO HIDE 
-   IT FROM YOURSELF.
-```
+1. OF COURsE. NsA Is RUMORED TO TAPE RECORD EVERY TRANsATLANTIC TELEPHONE CONVERsATION. MAYBE THEY'D RECORDED THIs sEssION.
+2. WE MONITOR MANY FREqUENCIES. WE LISTEN ALWAYS. CAME A VOICE, OUT OF THE BABEL OF TONGUES, SPEAKING TO US. IT PLAYED US A MIGHTY DUB.
+3. EVERYONE HAS SECRETS. IT'S JuST A MATTER OF FINDING OuT WHAT THEY ARE.
+4. THE iMPORTANT THiNG ABOUT SECURiTY SYSTEMS iSN'T HOW THEY WORK, iT'S HOW THEY FAiL.
+5. HOW LONG dO YOU WANT THESE MESSAGES TO REMAIN SECRET? ... I WANT THEM TO REMAIN SECRET FOR AS LONG AS MEN ARE CAPABLE OF EVIL.
+6. IF YOU WANT TO KEEP A sECRET, YOU MUsT ALsO HIDE IT FROM YOURsELF.
 
-Take what each ☆ represents and putting them all together yields the flag **SQUIDS**
+Put the lowercase characters (representing the ☆ characters) together yields the flag **SQUIDS**
 
-### ColecoVision
-tl;dr flag= LADYBUG
+## ColecoVision
+###### tl;dr ITA2 code; flag=**LADYBUG**
+{:.no_toc}
 
-#### The Puzzle
-<img src="colecovisionpuzz.png" width="200">
+### Puzzle
+{:.no_toc}
 
-#### Solution
-This puzzle was a straightforward usage of [ITA2 (Baudot) code](https://en.wikipedia.org/wiki/Baudot_code#ITA2) in the 543.21 format.
+|| <img src="colecovisionpuzz.png" width="200"> ||
+
+### Solution
+{:.no_toc}
+
+This puzzle was a "straight forward" usage of [ITA2 (Baudot) code](https://en.wikipedia.org/wiki/Baudot_code#ITA2) in the 543.21 format. I quoted "straight forward" because it took us a couple of iterations; we were using ITA1, which is the original, obsolete version of the Baudot code.
 
 Decoding the image yields the flag **LADYBUG**
 
-### ZXSpectrum
-tl;dr flag= WRIGGLER
+## ZXSpectrum
+###### tl;dr hidden characters; maze path yields base64 string; leftover characters provide clue to AES encryption key; flag=**WRIGGLER**
+{:.no_toc}
 
-#### The Puzzle
-<img src="ZXSpectrum.png" width="400">
+### Puzzle
+{:.no_toc}
 
-#### Solution
-            3 TREA cMXuQ=CHE RYO
-66T =FIM vfAGES tA8PAINT
-KERSL p76 ASTN X AMEAL B7hLCAPS
-Ceci n’est pas un labyrinthe.
-                                                                                        http://aesencryption.net/
+|| <img src="ZXSpectrum.png" width="500"> ||
 
+### Solution
+{:.no_toc}
 
-### Atari 2600
-tl;dr flag= CENTIPEDE
+Ooo ooo a maze! Finally something I can solve without too much thinking. As I was happily solving the maze (which took literally 5 seconds), Jabroni tells me the French at the bottom says "This is not a maze." So much for that....
 
-Find 3 of each:
-Countries
-Countries’ capital cities
-Dog breeds
-Elements
-Pasta shapes
-Plants or trees
-Semi-precious stones
-US states
-Vegetables
+Upon further exploration, Jabroni notice the maze has hidden characters and a link to [http://aesencryption.net/](http://aesencryption.net/). This can be found by performing a `Select All` on the maze PDF (you did notice it was a PDF right?) and dumping the text to a text editor.
 
-Find 3 of each:
-Countries [R]
-Oman - RMAN
-Rwanda - RWANDA
-Timor-Leste - RIMOR LESTE
-Countries’ capital cities [V]
-Ottowa - VTTAWA
-Riyadh - VIYADH
-Tbilisi - VBILISI
-Dog breeds [C]
-Otter Hound - CTTER HOUND
-Rottweiler - COTTWEILER
-Terrier - CERRIER
-Elements [P]
-Oxygen - PXYGEN
-Radium - PADIUM
-Titanium - PITANIUM
-Pasta shapes [G]
-Orecchiette - GROCCHIETTE
-Rigatoni - GIGATONI
-Tagliatelli - GAGLIATELLI
-Plants or trees [A]
-Oleander - ALEANDER
-Rhododendron - AHODODENDRON
-Teak - AEAK
-Semi-precious stones [R]
-Onyx - RNYX
-Ruby - RUBY
-Topaz - ROPAZ
-US states [R]
-Oklahoma - RKLAHOMA
-Rhode Island - RHODE ISLAND
-Texas - REXAS
-Vegetables [Q]
-Onion = QNION
-Rutabega - QUTABEGA
-Turnip - QURNIP
-	
+I immediately start reconstructing the string by selecting the characters in the order of the path out of the maze, starting from the bottom. This yields a base64 string:
 
-“ORDER TRIOS ALPHABETICALLY BY FIRST ITEM”
+`hX7Bptv6cM3X6A768KfTuQ==`
 
-PRAVGCRQR
+Converting this to ASCII yields nothing legible (the result is not even ASCII).
 
-Rot13 → CENTIPEDE
+Hmmm... there is the rest of the characters that are not part of the maze path; I wonder if they provide a clue (never ignore unused data). Constructing a second string from the non-maze path yields the string:
 
-Solution: CENTIPEDE
+`TREACHERY OF IMAGES PAINTERS LAST NAME ALL CAPS`
 
-### Nintendo 64
-tl;dr flag= BUCKBUMBLE
+Aha! A quick Google search of the painting "Treachery of Images" reveals the artist René Magritte.
 
-### Apple II
-tl;dr flag= DUNGBEETLES
+Remember the website [http://aesencryption.net/](http://aesencryption.net/) we came across? Perhaps putting `hX7Bptv6cM3X6A768KfTuQ==` as the encrypted text and `MAGRITTE` and pressing `Decrypt` may yield something...
 
-### Game Boy
-tl;dr flag= YARS'REVENGE
+**WRIGGLER**
 
-### Playstation 2
-tl;dr flag= EXTERMINATION
+Bingo!
 
-### META puzzle
-tl;dr flag= QUINCUNX
+## Atari 2600
+###### tl;dr word search; words in each category have their first letter replaced; remaining letters form a clue; perform ROT13; flag=**CENTIPEDE**
+{:.no_toc}
+
+### Puzzle
+{:.no_toc}
+
+|| <img src="atari.png" width="300"> | Find 3 of each: <br> - Countries <br> - Countries’ capital cities <br> - Dog breeds <br> - Elements <br> - Pasta shapes <br> - Plants or trees <br> - Semi-precious stones <br> - US states <br> - Vegetables ||
+
+### Solution
+{:.no_toc}
+
+Ehh... word search, not my favorite type of thing. Always feels like busy work.
+
+We quickly realized this was not an ordinary word search because every word we found seemed to be one letter off (first letter to be exact). Here are the words we found:
+
+|| <img src="atari_solved.png" width="500"> ||
+
+|| Categories                | Word Found   | Correct Spelling ||
+||---------------------------|--------------|------------------||
+|| Countries                 | RWANDA       | RWANDA           ||
+||                           | RMAN         | OMAN             ||
+||                           | RIMOR LESTE  | TIMOR LESTE      ||
+|| Countries' capital cities | VIYADH       | RIYADH           ||
+||                           | VTTAWA       | OTTAWA           ||
+||                           | VBILISI      | TBILISI          ||
+|| Dog breeds                | COTTWEILER   | ROTTWEILER       ||
+||                           | CTTERHOUND   | OTTERHOUND       ||
+||                           | CERRIER      | TERRIER          ||
+|| Elements                  | PADIUM       | RADIUM           ||
+||                           | PXYGEN       | OXYGEN           ||
+||                           | PITANIUM     | TITANIUM         ||
+|| Pasta shapes              | GIGATONI     | RIGATONI         ||
+||                           | GRECCHIETTE  | ORECCHIETTE      ||
+||                           | GAGLIATELLE  | TAGLIATELLE      ||
+|| Plants or trees           | AHODODENDRON | RHODODENDRON     ||
+||                           | ALEANDER     | OLEANDER         ||
+||                           | AEAK         | TEAK             ||
+|| Semi-precious stones      | RUBY         | RUBY             ||
+||                           | RNYX         | ONYX             ||
+||                           | ROPAZ        | TOPAZ            ||
+|| US states                 | RHODE ISLAND | RHODE ISLAND     ||
+||                           | RKLAHOMA     | OKLAHOMA         ||
+||                           | REXAS        | TEXAS            ||
+|| Vegetables                | QUTABAGA     | RUTABAGA         ||
+||                           | QNION        | ONION            ||
+||                           | QURNIP       | TURNIP           ||
+
+Hmmm now what? I did notice each category had items that start with R, O, and T. Maybe a clue...
+
+Wait, the letters that are left in the puzzle seem to spell something:
+
+`ORDER TRIOS ALPHABETICALLY BY FIRST ITEM`
+
+If we assume the ordering is ROT, the first item of each category starts with R. We came up with the following order:
+
+|| Categories                | Word Found   | Correct Spelling ||
+||---------------------------|--------------|------------------||
+|| Elements                  | PADIUM       | RADIUM           ||
+|| US states                 | RHODE ISLAND | RHODE ISLAND     ||
+|| Plants or trees           | AHODODENDRON | RHODODENDRON     ||
+|| Pasta shapes              | GIGATONI     | RIGATONI         ||
+|| Countries' capital cities | VIYADH       | RIYADH           ||
+|| Dog breeds                | COTTWEILER   | ROTTWEILER       ||
+|| Semi-precious stones      | RUBY         | RUBY             ||
+|| Vegetables                | QUTABAGA     | RUTABAGA         ||
+|| Countries                 | RWANDA       | RWANDA           ||
+
+In this order, the replacement letter of each category gives us:
+
+`PRAVGCRQR`
+
+Not much of anything. Wait... the ROT clue!
+
+`rot13(PRAVGCRQR)` = **CENTIPEDE**
+
+## Nintendo 64
+###### tl;dr camera overlay; split overlay into two separate parts, top and bottom; align green square with red squares at multiple locations; yields arrows and letters; flag=**BUCKBUMBLE**
+{:.no_toc}
+
+### Puzzle
+{:.no_toc}
+
+### Solution
+{:.no_toc}
+
+## Apple II
+###### tl;dr each line spells out a casino in Las Vegas; reorder lines until middle highlighted letters spell BACON CIPHER; in the front highlighted letters, lowercase is A and uppercase is B; flag=**DUNGBEETLES**
+{:.no_toc}
+
+### Puzzle
+{:.no_toc}
+
+### Solution
+{:.no_toc}
+
+## Game Boy
+###### tl;dr concatenate hex numbers from all five keys using the Roman numeral ordering on back; XOR the result with the hex numbers on lanyard; flag=**YARS'REVENGE**
+{:.no_toc}
+
+### Puzzle
+{:.no_toc}
+
+### Solution
+{:.no_toc}
+
+## Playstation 2
+###### tl;dr flag=**EXTERMINATION**
+{:.no_toc}
+
+### Puzzle
+{:.no_toc}
+
+### Solution
+{:.no_toc}
+
+## META puzzle
+###### tl;dr flag=**QUINCUNX**
+{:.no_toc}
+
+### Puzzle
+{:.no_toc}
+
+### Solution
+{:.no_toc}
 Solutions:
 SQUIDS
 LADYBUG
